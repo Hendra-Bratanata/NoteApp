@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Note App</string>
+    <string name="date">DATE</string>
+    <string name="title">Title</string>
+    <string name="desc">desc</string>
+    <string name="judul">Judul</string>
+    <string name="descripsi">Descripsi</string>
+    <string name="hapus">Hapus</string>
+</resources>
