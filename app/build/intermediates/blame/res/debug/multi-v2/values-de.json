@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Latihan Android Developer Expert\\MyNoteApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "D:\\Latihan Android Developer Expert\\NoteApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Bratanata\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\c7b93c31219126297b5165cfdf3abd9f\\res\\values-de\\values-de.xml",

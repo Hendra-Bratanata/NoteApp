@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Latihan Android Developer Expert\\MyNoteApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "D:\\Latihan Android Developer Expert\\NoteApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Bratanata\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\51c375494179d232661c335a67223164\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
