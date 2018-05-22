@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyNoteApp.iml" filepath="$PROJECT_DIR$/MyNoteApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NoteApp.iml" filepath="$PROJECT_DIR$/NoteApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ichironoteapp/ichironoteapp.iml" filepath="$PROJECT_DIR$/ichironoteapp/ichironoteapp.iml" />
     </modules>
   </component>
 </project>

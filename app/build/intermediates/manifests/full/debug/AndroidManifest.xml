@@ -8,6 +8,13 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="27" />
 
+    <permission
+        android:name="com.ichirotech.bratanata.mynoteapp.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.ichirotech.bratanata.mynoteapp.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -25,6 +32,13 @@
             </intent-filter>
         </activity>
         <activity android:name="com.ichirotech.bratanata.mynoteapp.FormAddUpdateActivity" />
+
+        <provider
+            android:name="com.ichirotech.bratanata.mynoteapp.Provider.NoteProvider"
+            android:authorities="com.ichirotech.bratanata.mynoteapp"
+            android:exported="true"
+            android:readPermission="com.ichirotech.bratanata.mynoteapp.READ_DATABASE"
+            android:writePermission="com.ichirotech.bratanata.mynoteapp.WRITE_DATABASE" />
     </application>
 
 </manifest>

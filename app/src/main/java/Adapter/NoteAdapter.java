@@ -2,6 +2,8 @@ package Adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,27 +15,31 @@ import android.widget.TextView;
 import com.ichirotech.bratanata.mynoteapp.FormAddUpdateActivity;
 import com.ichirotech.bratanata.mynoteapp.R;
 
+import java.net.URI;
 import java.util.LinkedList;
 
+import DataBaseContract.DatabaseContract;
 import Support.CostomOnItemClickListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import entity.Note;
 
+import static DataBaseContract.DatabaseContract.CONTENT_URI;
+
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder> {
 
-        private LinkedList<Note> listNote;
+        private Cursor listNote;
         private Activity activity;
 
     public NoteAdapter(Activity activity) {
         this.activity = activity;
     }
 
-    public LinkedList<Note> getListNote() {
+    public Cursor getListNote() {
         return listNote;
     }
 
-    public void setListNote(LinkedList<Note> listNote) {
+    public void setListNote(Cursor listNote) {
         this.listNote = listNote;
     }
 
@@ -47,17 +53,18 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, final int position) {
-        holder.tvTitle.setText(getListNote().get(position).getTitle());
-        holder.tvDate.setText(getListNote().get(position).getDate());
-        holder.tvDesc.setText(getListNote().get(position).getDecs());
+        final Note note =   getItem(position);
+        holder.tvTitle.setText(note.getTitle());
+        holder.tvDate.setText(note.getDate());
+        holder.tvDesc.setText(note.getDecs());
 
         holder.cvNote.setOnClickListener(new CostomOnItemClickListener(position, new CostomOnItemClickListener.OnItemClickCallBack() {
             @Override
             public void onItemClicked(View view, int pos) {
                 Intent intent = new Intent(activity, FormAddUpdateActivity.class);
-                intent.putExtra(FormAddUpdateActivity.EXTRA_POSITION,pos);
-                intent.putExtra(FormAddUpdateActivity.EXTRA_NOTE,getListNote().get(pos));
-                activity.startActivityForResult(intent,FormAddUpdateActivity.REQUEST_UPDATE);
+                Uri uri =Uri.parse(CONTENT_URI+"/"+note.getId());
+                intent.setData(uri);
+                activity.startActivityForResult(intent,FormAddUpdateActivity.RESULT_UPDATE);
 
             }
         }));
@@ -65,7 +72,8 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     @Override
     public int getItemCount() {
-        return getListNote().size();
+        if(listNote == null)return 0;
+        return listNote.getCount();
     }
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
@@ -84,5 +92,11 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
             ButterKnife.bind(this,itemView);
 
         }
+    }
+    private Note getItem(int position){
+        if (!listNote.moveToPosition(position)) {
+            throw new IllegalStateException("Position invalid");
+        }
+        return new Note(listNote);
     }
 }

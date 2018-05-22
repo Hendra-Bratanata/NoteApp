@@ -1,7 +1,10 @@
 package com.ichirotech.bratanata.mynoteapp;
 
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,10 +20,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import DataBaseContract.DatabaseContract;
 import DataBaseContract.NoteHelper;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import entity.Note;
+
+import static DataBaseContract.DatabaseContract.CONTENT_URI;
+import static DataBaseContract.DatabaseContract.NoteColumns.DATE;
+import static DataBaseContract.DatabaseContract.NoteColumns.DESC;
+import static DataBaseContract.DatabaseContract.NoteColumns.TITLE;
 
 public class FormAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
 @BindView(R.id.edt_desc)
@@ -54,17 +63,20 @@ public class FormAddUpdateActivity extends AppCompatActivity implements View.OnC
         btnSubmit.setOnClickListener(this);
         noteHelper = new NoteHelper(this);
         noteHelper.open();
-        note = getIntent().getParcelableExtra(EXTRA_NOTE);
+        Uri uri = getIntent().getData();
 
-        if(note != null) {
-            position = getIntent().getIntExtra(EXTRA_POSITION, 0);
-            isEdit = true;
+        if(uri != null) {
+            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
 
-
+            if (cursor != null) {
+                if (cursor.moveToFirst()) note = new Note(cursor);
+                cursor.close();
+            }
         }
         String actionBarTitle = null;
         String btnTitle = null;
-        if(isEdit){
+        if(note != null ){
+                isEdit =true;
                 actionBarTitle = "Ubah";
                 btnTitle = "Update";
                 edtJudul.setText(note.getTitle());
@@ -103,23 +115,19 @@ public class FormAddUpdateActivity extends AppCompatActivity implements View.OnC
 
             }
             if(!isEmpety){
-                Note newNote = new Note();
-                newNote.setTitle(title);
-                newNote.setDecs(desc);
+                ContentValues contentValues = new ContentValues();
+                contentValues.put(TITLE,title);
+                contentValues.put(DESC,desc);
 
-                Intent intent = new Intent();
 
                 if(isEdit){
-                    newNote.setDate(note.getDate());
-                    newNote.setId(note.getId());
-                    noteHelper.update(newNote);
+                    getContentResolver().update(getIntent().getData(),contentValues, null, null);
 
-                    intent.putExtra(EXTRA_POSITION,position);
-                    setResult(RESULT_UPDATE,intent);
+                    setResult(RESULT_UPDATE);
                     finish();
                 }else{
-                    newNote.setDate(getCurrentDate());
-                    noteHelper.insert(newNote);
+                   contentValues.put(DATE,getCurrentDate());
+                    getContentResolver().insert(CONTENT_URI,contentValues);
                     setResult(RESULT_ADD);
                     finish();
                 }
@@ -144,7 +152,7 @@ public class FormAddUpdateActivity extends AppCompatActivity implements View.OnC
             case R.id.action_delete:
                 showAlertDialog(ALERT_DIALOG_DELETE);
                 break;
-            case R.id.home:
+            case  android.R.id.home:
                 showAlertDialog(ALERT_DIALOG_CLOSE);
                 break;
 
@@ -184,10 +192,8 @@ public class FormAddUpdateActivity extends AppCompatActivity implements View.OnC
                         if(isDialogClose){
                             finish();
                         }else {
-                            noteHelper.delete(note.getId());
-                            Intent intent = new Intent();
-                            intent.putExtra(EXTRA_POSITION,position);
-                            setResult(RESULT_DELETE,intent);
+                            getContentResolver().delete(getIntent().getData(),null,null);
+                            setResult(RESULT_DELETE,null);
                             finish();
                         }
                     }

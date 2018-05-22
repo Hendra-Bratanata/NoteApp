@@ -1,8 +1,18 @@
 package entity;
 
 
+import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import DataBaseContract.DatabaseContract;
+
+import static DataBaseContract.DatabaseContract.NoteColumns.DATE;
+import static DataBaseContract.DatabaseContract.NoteColumns.DESC;
+import static DataBaseContract.DatabaseContract.NoteColumns.TITLE;
+import static DataBaseContract.DatabaseContract.getColumnInt;
+import static DataBaseContract.DatabaseContract.getColumnString;
+import static android.provider.BaseColumns._ID;
 
 public class Note implements Parcelable {
 
@@ -12,6 +22,12 @@ public class Note implements Parcelable {
     private String date;
 
     public Note() {
+    }
+    public Note(Cursor cursor){
+        this.id = getColumnInt(cursor, _ID);
+        this.title = getColumnString(cursor, TITLE);
+        this.decs = getColumnString(cursor, DESC);
+        this.date = getColumnString(cursor, DATE);
     }
 
     public int getId() {

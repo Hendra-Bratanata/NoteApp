@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\c14eadc509fa3629b3a9b750beecf2cf\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\51c375494179d232661c335a67223164\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\9670062f55823a0a5b86aa4ba0210c34\AndroidManifest.xml:17:1-22:12
@@ -24,59 +24,83 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Bratanata\.gra
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2fb68490c882239ae41f1cfdb9335d9c\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b58c1b0fafaad32d57fc9883d51930a9\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\996868396350c533859ae836cb0a9bca\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:2:11-69
+permission#com.ichirotech.bratanata.mynoteapp.READ_DATABASE
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:4:5-115
+	android:protectionLevel
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:4:81-113
+	android:name
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:4:17-80
+permission#com.ichirotech.bratanata.mynoteapp.WRITE_DATABASE
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:5:5-116
+	android:protectionLevel
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:5:82-114
+	android:name
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:5:17-81
 application
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a07c4748721dee19d459f25e67b23fc3\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a07c4748721dee19d459f25e67b23fc3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\e4bdf96a987bc163f73f4da7550ae7a8\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bratanata\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\e4bdf96a987bc163f73f4da7550ae7a8\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:12:9-40
 activity#com.ichirotech.bratanata.mynoteapp.MainActivity
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:13:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:17:27-74
 activity#com.ichirotech.bratanata.mynoteapp.FormAddUpdateActivity
-ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:19:9-68
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:20:9-68
 	android:name
-		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:19:19-56
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:20:19-56
+provider#com.ichirotech.bratanata.mynoteapp.Provider.NoteProvider
+ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:21:9-26:90
+	android:readPermission
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:25:13-86
+	android:authorities
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:22:13-69
+	android:exported
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:24:13-36
+	android:writePermission
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:26:13-88
+	android:name
+		ADDED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml:23:13-50
 uses-sdk
 INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Latihan Android Developer Expert\NoteApp\app\src\main\AndroidManifest.xml
